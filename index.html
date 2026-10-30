@@ -1,0 +1,63 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="theme-color" content="#09151c" />
+  <title>SunShift India — Home energy, in sync</title>
+  <link rel="stylesheet" href="/src/styles.css" />
+  <link rel="stylesheet" href="/src/features.css" />
+</head>
+<body>
+  <div class="app-shell">
+    <aside class="sidebar">
+      <a class="brand" href="#overview"><span class="brand-mark">☼</span><span><b>sunshift</b><small>INDIA · HOME ENERGY</small></span></a>
+      <div class="home-picker"><span class="home-icon">⌂</span><span><b>Sharma Residence</b><small>Pune, Maharashtra</small></span><span class="chevron">⌄</span></div>
+      <p class="nav-label">YOUR ENERGY</p>
+      <nav id="navigation">
+        <a class="nav-item active" href="#overview" data-view="overview"><span>◫</span>Overview</a>
+        <a class="nav-item" href="#live-flow" data-view="live-flow"><span>⌁</span>Live flow</a>
+        <a class="nav-item" href="#forecast" data-view="forecast"><span>◷</span>Forecast</a>
+        <a class="nav-item" href="#battery" data-view="battery"><span>▣</span>Battery</a>
+        <a class="nav-item" href="#appliances" data-view="appliances"><span>⌘</span>Appliances</a>
+        <p class="nav-label nav-spaced">PLAN AHEAD</p>
+        <a class="nav-item" href="#scenarios" data-view="scenarios"><span>◇</span>Scenarios</a>
+        <a class="nav-item" href="#savings" data-view="savings"><span>↗</span>Savings</a>
+        <a class="nav-item" href="#history" data-view="history"><span>▤</span>7-day history</a>
+        <a class="nav-item" href="#reports" data-view="reports"><span>⇩</span>Reports</a>
+        <a class="nav-item" href="#settings" data-view="settings"><span>⚙</span>Settings</a>
+      </nav>
+      <div class="sidebar-bottom"><div class="sun-card"><div class="sun-card-icon">☀</div><div><b>Good solar day</b><small>Clear skies until 4 PM</small></div><span class="pulse"></span></div><div class="profile"><div class="avatar">AS</div><div><b>Arjun Sharma</b><small>Home owner</small></div><span class="chevron">···</span></div></div>
+    </aside>
+    <main class="main-content">
+      <header class="topbar"><div class="crumb"><span>Home</span><i>/</i><b id="crumb-current">Overview</b></div><div class="top-actions"><span class="connection"><span></span>Demo model</span><button class="icon-button" aria-label="Notifications">♧<em></em></button><div class="top-date">WED, 30 OCT 2026</div></div></header>
+      <div class="content-wrap" id="dashboard-page">
+        <section class="welcome-row"><div><p class="eyebrow">WEDNESDAY · 30 OCTOBER 2026</p><h1>Your home, powered <span>beautifully.</span></h1><p class="subhead">Here’s how your energy is looking today.</p></div><button class="date-button">▦ &nbsp; Today <span>⌄</span></button></section>
+        <section class="weather-strip"><div class="weather-icon">☀</div><div class="weather-main"><b>29° <span>Sample clear-sky forecast</span></b><small>Pune, Maharashtra · Demonstration data</small></div><div class="weather-divider"></div><div class="weather-metric"><small>Sunrise</small><b>6:24 <small>AM</small></b></div><div class="weather-metric"><small>Sunset</small><b>6:03 <small>PM</small></b></div><div class="weather-tip"><span>✦</span> Try the appliance planner to shift loads into the solar window</div></section>
+        <section class="kpi-grid">
+          <article class="kpi-card"><div class="kpi-head"><span>Solar generated</span><span class="kpi-icon yellow">☼</span></div><div class="kpi-value"><strong id="solar-total">18.6</strong><small>kWh</small></div><div class="kpi-foot"><span class="trend up">↗ 12%</span> vs. your daily average</div><div class="mini-bars yellow-bars"><i style="height:35%"></i><i style="height:46%"></i><i style="height:40%"></i><i style="height:63%"></i><i style="height:49%"></i><i style="height:76%"></i><i style="height:62%"></i><i style="height:90%"></i><i style="height:71%"></i><i style="height:100%"></i><i style="height:79%"></i><i style="height:84%"></i></div></article>
+          <article class="kpi-card"><div class="kpi-head"><span>Home consumed</span><span class="kpi-icon blue">⌂</span></div><div class="kpi-value"><strong id="consumption-total">11.2</strong><small>kWh</small></div><div class="kpi-foot"><span class="trend neutral">● On track</span> for your daily target</div><div class="mini-bars blue-bars"><i style="height:25%"></i><i style="height:32%"></i><i style="height:47%"></i><i style="height:38%"></i><i style="height:55%"></i><i style="height:66%"></i><i style="height:53%"></i><i style="height:77%"></i><i style="height:69%"></i><i style="height:58%"></i><i style="height:83%"></i><i style="height:100%"></i></div></article>
+          <article class="kpi-card"><div class="kpi-head"><span>Battery stored</span><span class="kpi-icon green">▣</span></div><div class="kpi-value"><strong id="battery-level">78</strong><small>%</small></div><div class="kpi-foot"><span class="trend up">+ 2.4 kWh</span> charged since sunrise</div><div class="battery-progress"><span style="width:78%"></span></div><div class="progress-labels"><span>0 kWh</span><span>6.0 kWh capacity</span></div></article>
+          <article class="kpi-card savings-card"><div class="kpi-head"><span>Grid savings today</span><span class="kpi-icon green">₹</span></div><div class="kpi-value"><small class="currency">₹</small><strong id="savings-total">148</strong></div><div class="kpi-foot"><span class="trend up">↗ Sample estimate</span> using your saved tariff</div><div class="savings-note">🌱 &nbsp; <span id="co2-avoided">4.2 kg CO₂ avoided</span></div></article>
+        </section>
+        <section class="dashboard-grid">
+          <article class="panel chart-panel"><div class="panel-heading"><div><h2>Energy at a glance</h2><p>Hourly sample dispatch · kW</p></div><div class="legend"><span><i class="dot solar-dot"></i>Solar</span><span><i class="dot home-dot"></i>Home</span><span><i class="dot battery-dot"></i>Battery</span></div></div><div class="chart-wrap"><div class="y-labels"><span>4 kW</span><span>3 kW</span><span>2 kW</span><span>1 kW</span><span>0</span></div><svg id="energy-chart" viewBox="0 0 760 220" preserveAspectRatio="none" aria-label="Energy production and use chart"><defs><linearGradient id="solar-fill" x1="0" x2="0" y1="0" y2="1"><stop offset="0" stop-color="#f2bd5f" stop-opacity=".24"/><stop offset="1" stop-color="#f2bd5f" stop-opacity="0"/></linearGradient></defs><g class="gridlines"><path d="M0 20H760M0 65H760M0 110H760M0 155H760M0 200H760"/></g><path id="solar-area" class="area-solar" d="M0 190 C45 183 70 169 110 155 S170 112 220 90 S290 52 340 40 S410 28 450 36 S510 58 560 76 S610 110 660 130 S710 157 760 169 L760 200 L0 200Z"/><path id="solar-line" class="line solar-line" d="M0 190 C45 183 70 169 110 155 S170 112 220 90 S290 52 340 40 S410 28 450 36 S510 58 560 76 S610 110 660 130 S710 157 760 169"/><path id="home-line" class="line home-line" d="M0 165 C45 168 75 156 110 163 S170 170 220 160 S290 147 340 153 S410 155 450 149 S510 155 560 147 S610 151 660 139 S710 145 760 142"/><path id="battery-line" class="line battery-line" d="M0 185 C45 188 75 180 110 175 S170 168 220 157 S290 148 340 143 S410 135 450 132 S510 129 560 130 S610 130 660 132 S710 133 760 136"/><line id="chart-cursor" x1="520" y1="14" x2="520" y2="200"/><circle id="chart-dot" cx="520" cy="54" r="4"/></svg><div class="x-labels"><span>6 AM</span><span>8 AM</span><span>10 AM</span><span>12 PM</span><span>2 PM</span><span>4 PM</span><span>6 PM</span><span>8 PM</span></div></div><div class="chart-insight"><span>✦</span><div><b>Dispatch adapts to your scenario</b><small>Change the weather or grid conditions in Scenarios.</small></div><span class="insight-time">SAMPLE MODEL</span></div></article>
+          <article class="panel flow-panel"><div class="panel-heading"><div><h2>Sample energy flow</h2><p>Modelled at the 1 PM solar peak</p></div><span class="live-tag"><i></i> SIMULATED</span></div><div class="flow-visual"><div class="flow-node solar-node"><span>☼</span><b><span id="flow-solar">2.8</span> <small>kW</small></b><small>Solar panels</small></div><div class="flow-lines"><div class="flow-line line-a"><i></i></div><div class="flow-line line-b"><i></i></div><div class="flow-line line-c"><i></i></div></div><div class="flow-node home-node"><span>⌂</span><b><span id="flow-home">1.4</span> <small>kW</small></b><small>Your home</small></div><div class="flow-node battery-node"><span>▣</span><b><span id="flow-battery">1.1</span> <small>kW</small></b><small>Charging</small></div><div class="flow-node grid-node"><span>ϟ</span><b><span id="flow-grid">0.3</span> <small>kW</small></b><small>To the grid</small></div></div><div class="flow-footer"><span><i class="dot solar-dot"></i> Solar covers <b id="solar-coverage">82%</b> of your needs</span><button class="text-button" data-jump="live-flow">Details →</button></div></article>
+        </section>
+        <section class="lower-grid"><article class="panel forecast-panel"><div class="panel-heading"><div><h2>Next-day forecast</h2><p id="forecast-data-note">Weather-based solar forecast for Pune</p></div><button class="text-button" data-jump="forecast">7-day outlook →</button></div><div class="forecast-row"><div class="forecast-stat"><span class="forecast-emoji">☀</span><b><span id="forecast-expected">—</span> <small>kWh</small></b><small>Expected generation</small></div><div class="forecast-stat"><span class="forecast-emoji cloud">◒</span><b><span id="forecast-potential">—</span> <small>kW</small></b><small>Peak solar output</small></div><div class="forecast-stat"><span class="forecast-emoji green-text">↗</span><b><span id="forecast-confidence">—</span> <small></small></b><small>Rain probability</small></div></div><div class="hourly"><div><small>6 AM</small><span>☀</span><b>Sunrise</b></div><div><small>9 AM</small><span>☀</span><b>Morning</b></div><div><small>12 PM</small><span>☀</span><b>Solar peak</b></div><div><small>3 PM</small><span>⛅</span><b>Afternoon</b></div><div><small>6 PM</small><span>☁</span><b>Sunset</b></div></div></article><article class="panel smart-panel"><div class="panel-heading"><div><h2>Smart suggestion</h2><p>A little shift, a lot of savings</p></div><span class="sparkle">✦</span></div><div class="suggestion-body"><div class="suggestion-icon">◉</div><div><b>Find the best appliance window</b><p>Compare solar coverage and savings for your washing machine, dishwasher, water heater or EV charger.</p></div></div><button class="primary-button" id="schedule-button">Open appliance planner <span>→</span></button></article></section>
+        <section class="insight-row"><article><small>GRID IMPORTS</small><b><span id="grid-import-total">0.0</span> kWh</b><span>Estimated from this dispatch</span></article><article><small>SOLAR SELF-SUFFICIENCY</small><b><span id="self-sufficiency-total">0</span>%</b><span>Home demand served by solar and battery</span></article><article><small>ENERGY SENT TO GRID</small><b><span id="grid-export-total">0.0</span> kWh</b><span>Surplus after battery charging</span></article><div class="insight-actions"><button class="text-button" data-jump="history">See 7-day history →</button><button class="text-button" data-jump="reports">Export energy report ↓</button></div></section>
+      <footer class="footer"><span>SunShift India <i>·</i> Making every unit count</span><span>SIMULATED DATA <i>·</i> No live inverter connection</span></footer>
+      </div>
+      <section class="page-view" id="view-overlay" hidden>
+        <div class="page-wrap">
+          <div class="page-toolbar"><a href="#overview" id="page-back">← Overview</a><span>HOME ENERGY · SIMULATED DATA</span></div>
+          <div class="page-heading"><p class="eyebrow">SUNSHIFT INDIA</p><h1 id="overlay-title">Live flow</h1><p id="overlay-copy"></p></div>
+          <div class="overlay-content page-content" id="overlay-content"></div>
+        </div>
+      </section>
+      <div class="toast" id="toast" role="status"></div>
+    </main>
+  </div>
+  <script type="module" src="/src/app.js"></script>
+</body>
+</html>
