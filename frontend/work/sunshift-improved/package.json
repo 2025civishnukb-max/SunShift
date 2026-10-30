@@ -1,0 +1,1 @@
+{"description":"SunShift India — weather-based home-energy planning demo (static site, no build step, no backend).","engines":{"node":">=18"},"name":"sunshift-india","private":true,"scripts":{"start":"python3 -m http.server 8000","start:windows":"python -m http.server 8000","test":"node tests/sim.test.js"},"version":"1.1.0"}

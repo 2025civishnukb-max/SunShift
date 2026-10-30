@@ -1,0 +1,17 @@
+{
+  "settings": {
+    "solarKw": 5.2,
+    "batteryKwh": 6,
+    "tariff": 8,
+    "reserve": 20,
+    "batteryStart": 0.42,
+    "panelTilt": 20,
+    "panelAzimuth": 0,
+    "location": "Pune, Maharashtra",
+    "latitude": 18.5204,
+    "longitude": 73.8567
+  },
+  "settingsConfiguredAt": "2026-10-30T14:02:28.208Z",
+  "schedule": [],
+  "runs": []
+}
