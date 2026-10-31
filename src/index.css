@@ -1,0 +1,94 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html {
+    -webkit-font-smoothing: antialiased;
+    text-rendering: optimizeLegibility;
+  }
+  body {
+    @apply bg-base text-ink font-sans;
+    background-image: radial-gradient(1200px 500px at 85% -10%, rgba(65, 105, 245, 0.07), transparent 60%),
+      radial-gradient(900px 420px at -10% 0%, rgba(255, 148, 77, 0.05), transparent 55%);
+    background-attachment: fixed;
+  }
+  ::selection {
+    background: rgba(65, 105, 245, 0.4);
+  }
+  * {
+    scrollbar-width: thin;
+    scrollbar-color: #3a3a3a transparent;
+  }
+  *::-webkit-scrollbar {
+    width: 8px;
+    height: 8px;
+  }
+  *::-webkit-scrollbar-thumb {
+    background: #3a3a3a;
+    border-radius: 8px;
+  }
+  *::-webkit-scrollbar-track {
+    background: transparent;
+  }
+}
+
+@layer components {
+  .field-label {
+    @apply mb-1.5 block text-[11px] font-semibold uppercase tracking-[0.08em] text-muted;
+  }
+  .num {
+    font-variant-numeric: tabular-nums;
+  }
+  /* Centered dialogs: constrained to the viewport with a dvh fallback for
+     mobile URL-bar / keyboard resize. Width is set per-component. */
+  .modal-panel {
+    max-height: calc(100vh - 32px);
+    max-height: calc(100dvh - 32px);
+  }
+}
+
+/* Recharts tooltip wrapper */
+.chart-tooltip {
+  @apply rounded-xl border border-line-strong bg-[#1d1d1d]/95 px-3.5 py-2.5 shadow-pop backdrop-blur;
+}
+.chart-tooltip .tip-title {
+  @apply mb-1.5 text-[11px] font-semibold uppercase tracking-wider text-faint;
+}
+.chart-tooltip .tip-row {
+  @apply flex items-center gap-2 text-[13px] text-ink;
+}
+.chart-tooltip .tip-dot {
+  @apply h-2 w-2 rounded-full;
+}
+.chart-tooltip .tip-value {
+  @apply ml-auto pl-4 font-semibold num;
+}
+
+input[type='range'] {
+  -webkit-appearance: none;
+  appearance: none;
+  height: 5px;
+  border-radius: 999px;
+  background: #3a3a3a;
+  outline: none;
+}
+input[type='range']::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 16px;
+  height: 16px;
+  border-radius: 50%;
+  background: #4169f5;
+  border: 3px solid #242424;
+  box-shadow: 0 0 0 1.5px rgba(65, 105, 245, 0.6);
+  cursor: pointer;
+}
+input[type='range']::-moz-range-thumb {
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  background: #4169f5;
+  border: 2px solid #242424;
+  cursor: pointer;
+}
